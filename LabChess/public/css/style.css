@@ -1,0 +1,123 @@
+/* Archivo: css/style.css */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Fondo por defecto */
+}
+
+.pieza{
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; /* Asegura que z-index funcione */
+    z-index: 0; /* Z-index más bajo para las piezas */
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tablero {
+    position: relative; /* Asegura que z-index funcione */
+    z-index: 1; /* Z-index alto para el tablero */
+    table-layout: fixed; /* Ajuste de diseño de tabla fijo */
+}
+
+#tablero table {
+    border-collapse: collapse;
+    border: 5px solid black;
+    position: relative; /* Asegura que z-index funcione en los td */
+    z-index: 1; /* Z-index alto para el tablero */
+}
+
+#tablero td {
+    width: 60px;
+    height: 60px;
+}
+
+/* Tema por defecto */
+.default-theme tr:nth-child(odd) td:nth-child(odd),
+.default-theme tr:nth-child(even) td:nth-child(even) {
+    background-color: #404040; /* Negro */
+}
+
+.default-theme tr:nth-child(odd) td:nth-child(even),
+.default-theme tr:nth-child(even) td:nth-child(odd) {
+    background-color: #fff; /* Blanco */
+}
+
+.default-theme {
+    background-color: #c6c6c6; /* Fondo por defecto */
+}
+
+
+
+/* Tema por defecto oscuro */
+
+.default-theme-black tr:nth-child(odd) td:nth-child(odd),
+.default-theme-black tr:nth-child(even) td:nth-child(even) {
+    background-color: #000000; /* Negro */
+}
+
+.default-theme-black tr:nth-child(odd) td:nth-child(even),
+.default-theme-black tr:nth-child(even) td:nth-child(odd) {
+    background-color: #5b5b5b; /* Blanco */
+}
+
+.default-theme-black {
+    background-color: #282828; /* Fondo por defecto */
+}
+
+/* Tema 1 */
+.theme1 tr:nth-child(odd) td:nth-child(odd),
+.theme1 tr:nth-child(even) td:nth-child(even) {
+    background-color: #b58863; /* Marrón oscuro */
+}
+
+.theme1 tr:nth-child(odd) td:nth-child(even),
+.theme1 tr:nth-child(even) td:nth-child(odd) {
+    background-color: #f0d9b5; /* Marrón claro */
+}
+
+.theme1 {
+    background-color: #c3a17f; /* Fondo temático */
+}
+
+/* Tema 2 */
+.theme2 tr:nth-child(odd) td:nth-child(odd),
+.theme2 tr:nth-child(even) td:nth-child(even) {
+    background-color: #002e8b; /* Rojo oscuro */
+}
+
+.theme2 tr:nth-child(odd) td:nth-child(even),
+.theme2 tr:nth-child(even) td:nth-child(odd) {
+    background-color: #cbffff; /* Rojo claro */
+}
+
+.theme2 {
+    background-color: #e1e5ff; /* Fondo temático */
+}
+
+/* Tema Wood */
+.wood tr:nth-child(odd) td:nth-child(odd),
+.wood tr:nth-child(even) td:nth-child(even) {
+    background-image: url('../storage/wood/oscuro.png'); /* oscuro */
+}
+
+.wood tr:nth-child(odd) td:nth-child(even),
+.wood tr:nth-child(even) td:nth-child(odd) {
+    background-image: url('../storage/wood/claro.png'); /* claro */
+}
+
+.wood {
+    background-image: url('../storage/wood/fondo.jpg'); /* Fondo temático */
+}
